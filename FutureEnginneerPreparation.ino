@@ -1,3 +1,4 @@
+#include "SoundSensor.h"
 #include "myServo.h"
 #include "InfraredSensor.h"
 #include "LED.h"
@@ -13,6 +14,7 @@
 #define UltrasonicSensor A0 //³¬Éù²¨
 #define InfraredSensor A1 //ºìÍâ±ÜÕÏ
 #define Servopin 7		//¶æ»ú (»ÆPMW£¬ºìVcc£¬×ØÉ«½ÓµØ)
+#define SoundSensorpin A2
 
 Console con;
 Button btn(BUTTON);
@@ -21,19 +23,22 @@ LED greenled(LED_GREEN);
 Infrared infrared(InfraredSensor);
 myServo myservo(Servopin);
 Servo mservo;
+SoundSenor soundsenor(SoundSensorpin);
 int angle=0;
 void setup()
 {
 	//pinMode(53, INPUT);
-	Serial3.begin(9600);
+	//Serial3.begin(9600);
 	pinMode(Beeper,OUTPUT);
 	mservo.attach(6);
+	Serial.begin(115200);
 }
 
 void loop()
 {
+	Serial.println(soundsenor.getvolume());
 	//if(Serial3.available())
-	Serial3.println("Hello");
+	//Serial3.println("Hello");
 	//Serial.println(scaleTo(analogRead(A0),0,1023,0,100));
 	//Serial.println(infrared.isBlocked());
 	//myservo.testScan();
