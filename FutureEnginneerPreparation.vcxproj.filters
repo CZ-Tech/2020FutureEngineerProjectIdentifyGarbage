@@ -24,9 +24,30 @@
     <ClInclude Include="testmodel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LED.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\软件\开发\Arduino\hardware\tools\avr\avr\include\avr\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InfraredSensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="testmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LED.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InfraredSensor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
