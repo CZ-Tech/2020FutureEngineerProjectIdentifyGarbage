@@ -110,6 +110,7 @@
     <ClInclude Include="E:\软件\开发\Arduino\hardware\tools\avr\avr\include\avr\common.h" />
     <ClInclude Include="InfraredSensor.h" />
     <ClInclude Include="LED.h" />
+    <ClInclude Include="myServo.h" />
     <ClInclude Include="testmodel.h" />
     <ClInclude Include="__vm\.FutureEnginneerPreparation.vsarduino.h" />
   </ItemGroup>
@@ -117,6 +118,7 @@
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="InfraredSensor.cpp" />
     <ClCompile Include="LED.cpp" />
+    <ClCompile Include="myServo.cpp" />
     <ClCompile Include="testmodel.cpp" />
   </ItemGroup>
   <PropertyGroup>

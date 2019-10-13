@@ -36,6 +36,9 @@
     <ClInclude Include="InfraredSensor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="myServo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="testmodel.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="InfraredSensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myServo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

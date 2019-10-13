@@ -1,3 +1,4 @@
+#include "myServo.h"
 #include "InfraredSensor.h"
 #include "LED.h"
 #include "Button.h"
@@ -11,24 +12,58 @@
 #define Beeper 2 //·äÃùÆ÷
 #define UltrasonicSensor A0 //³¬Éù²¨
 #define InfraredSensor A1 //ºìÍâ±ÜÕÏ
+#define Servopin 7		//¶æ»ú (»ÆPMW£¬ºìVcc£¬×ØÉ«½ÓµØ)
 
 Console con;
 Button btn(BUTTON);
 LED redled(LED_RED);
 LED greenled(LED_GREEN);
 Infrared infrared(InfraredSensor);
-
+myServo myservo(Servopin);
+Servo mservo;
+int angle=0;
 void setup()
 {
 	//pinMode(53, INPUT);
-	Serial.begin(115200);
+	Serial3.begin(9600);
 	pinMode(Beeper,OUTPUT);
+	mservo.attach(6);
 }
 
 void loop()
 {
+	//if(Serial3.available())
+	Serial3.println("Hello");
 	//Serial.println(scaleTo(analogRead(A0),0,1023,0,100));
-	Serial.println(infrared.isBlocked());
+	//Serial.println(infrared.isBlocked());
+	//myservo.testScan();
+	//myservo.getservo().write(90);
+	//for (int i = 0; i < 60; i++)
+	//{
+	//	myservo.getservo().write(myservo.getservo().read() + 3);
+	//	delay(10);
+	//}
+	//for (int i = 0; i < 60; i++)
+	//{
+	//	myservo.getservo().write(myservo.getservo().read() - 3);
+	//	delay(10);
+
+	//}
+	//for (int i = 0; i < 60; i++)
+	//{
+	//	mservo.write(angle=angle + 3);
+	//	delay(10);
+	//}
+	//for (int i = 0; i < 60; i++)
+	//{
+	//	mservo.write(angle=angle - 3);
+	//	delay(10);
+
+	//}
+	//mservo.write(180);
+	//delay(1000);
+	//mservo.write(90);
+	//delay(1000);
 }
 
 void ipinMode2(int a, int b)

@@ -17,6 +17,9 @@ class LED
 public:
 	LED(int i);
 	void light();
+	void off();
+	bool islight();
 private:
 	int pin;
+	bool Islight;
 };
