@@ -15,7 +15,6 @@
 #include "InfraredSensor.h"
 #include "LED.h"
 #include "Button.h"
-#include "testmodel.h"
 
 
 #define LED_RED  5
@@ -26,8 +25,8 @@
 #define InfraredSensor A1 //红外避障
 #define Servopin 7		//舵机 (黄PMW，红Vcc，棕色接地)
 #define SoundSensorpin A2
+#define VISION_TYPE VISION_BODY_DETECT;//VISION_TRAFFIC_CARD_DETECT 
 
-Console con;
 Button btn(BUTTON);
 LED redled(LED_RED);
 LED greenled(LED_GREEN);

@@ -113,7 +113,6 @@
     <ClInclude Include="mu.h" />
     <ClInclude Include="myServo.h" />
     <ClInclude Include="SoundSensor.h" />
-    <ClInclude Include="testmodel.h" />
     <ClInclude Include="__vm\.FutureEnginneerPreparation.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
@@ -123,7 +122,6 @@
     <ClCompile Include="mu.cpp" />
     <ClCompile Include="myServo.cpp" />
     <ClCompile Include="SoundSensor.cpp" />
-    <ClCompile Include="testmodel.cpp" />
   </ItemGroup>
   <PropertyGroup>
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>

@@ -29,6 +29,7 @@ void mu::initialize()
 			goto A;
 	}
 	Mu.VisionBegin(globalType);
+	//while (Mu.VisionBegin(VISION_BODY_DETECT) != MU_OK) { delay(10); };
 }
 
 void mu::work()
