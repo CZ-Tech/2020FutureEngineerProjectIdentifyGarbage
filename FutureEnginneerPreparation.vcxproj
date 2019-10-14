@@ -73,7 +73,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\FutureEnginneerPreparation;E:\软件\开发\Arduino\libraries\Servo\src;E:\软件\开发\Arduino\hardware\arduino\avr\cores\arduino;E:\软件\开发\Arduino\hardware\arduino\avr\variants\mega;E:\软件\开发\Arduino\hardware\tools\avr\avr\include\avr;E:\软件\开发\Arduino\hardware\tools\avr\avr\include;E:\软件\开发\Arduino\hardware\tools\avr\avr\include\avr;E:\软件\开发\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;E:\软件\开发\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;E:\软件\开发\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\FutureEnginneerPreparation;E:\软件\开发\Arduino\hardware\arduino\avr\libraries\Wire\src;E:\软件\开发\Arduino\libraries\Servo\src;E:\软件\开发\Arduino\hardware\arduino\avr\libraries\SoftwareSerial\src;$(ProjectDir)..\libraries\MU-Vision-Sensor-master\src;E:\软件\开发\Arduino\hardware\arduino\avr\libraries\Wire\src\utility;E:\软件\开发\Arduino\hardware\arduino\avr\cores\arduino;E:\软件\开发\Arduino\hardware\arduino\avr\variants\mega;E:\软件\开发\Arduino\hardware\tools\avr\avr\include\avr;E:\软件\开发\Arduino\hardware\tools\avr\avr\include;E:\软件\开发\Arduino\hardware\tools\avr\avr\include\avr;E:\软件\开发\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;E:\软件\开发\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;E:\软件\开发\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ProjectDir)__vm\.FutureEnginneerPreparation.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PreprocessorDefinitions>__AVR_atmega2560__;__AVR_ATmega2560__;F_CPU=16000000L;ARDUINO=108010;ARDUINO_AVR_MEGA2560;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -110,6 +110,7 @@
     <ClInclude Include="E:\软件\开发\Arduino\hardware\tools\avr\avr\include\avr\common.h" />
     <ClInclude Include="InfraredSensor.h" />
     <ClInclude Include="LED.h" />
+    <ClInclude Include="mu.h" />
     <ClInclude Include="myServo.h" />
     <ClInclude Include="SoundSensor.h" />
     <ClInclude Include="testmodel.h" />
@@ -119,6 +120,7 @@
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="InfraredSensor.cpp" />
     <ClCompile Include="LED.cpp" />
+    <ClCompile Include="mu.cpp" />
     <ClCompile Include="myServo.cpp" />
     <ClCompile Include="SoundSensor.cpp" />
     <ClCompile Include="testmodel.cpp" />

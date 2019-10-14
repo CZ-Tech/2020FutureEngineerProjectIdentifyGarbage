@@ -1,11 +1,22 @@
+#include "Arduino.h"
+#include <Wire.h>
+#include "Servo.h"
+#include <SoftwareSerial.h>
+#include <mu_vision_sensor_uart_interface.h>
+#include <mu_vision_sensor_uart_hw_interface.h>
+#include <mu_vision_sensor_type.h>
+#include <mu_vision_sensor_interface.h>
+#include <mu_vision_sensor_i2c_interface.h>
+#include <mu_vision_sensor_i2c_hw_interface.h>
+#include <MuVisionSensor.h>
+#include "mu.h"
 #include "SoundSensor.h"
 #include "myServo.h"
 #include "InfraredSensor.h"
 #include "LED.h"
 #include "Button.h"
-//#include <SoftwareSerial.h>
 #include "testmodel.h"
-#include "Servo.h"
+
 
 #define LED_RED  5
 #define LED_GREEN 4
@@ -24,6 +35,7 @@ Infrared infrared(InfraredSensor);
 myServo myservo(Servopin);
 Servo mservo;
 SoundSenor soundsenor(SoundSensorpin);
+mu mymu(VISION_BODY_DETECT);
 int angle=0;
 int buttoncounter = 0;
 
@@ -31,15 +43,18 @@ void setup()
 {
 	//pinMode(53, INPUT);
 	//Serial3.begin(9600);
-	pinMode(Beeper,OUTPUT);
-	mservo.attach(6);
+	//pinMode(Beeper,OUTPUT);
+	//mservo.attach(6);
 	Serial.begin(115200);
+	mymu.initialize();
 }
 
 void loop()
 {
-	btn.buttonCounterDown(buttoncounter);
-	Serial.println(buttoncounter);
+
+	mymu.work();
+	//btn.buttonCounterDown(buttoncounter);
+	//Serial.println(buttoncounter);
 	//Serial.println(soundsenor.getvolume());
 	//if(Serial3.available())
 	//Serial3.println("Hello");
