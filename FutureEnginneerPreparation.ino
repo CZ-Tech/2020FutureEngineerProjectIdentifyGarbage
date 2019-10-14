@@ -3,7 +3,7 @@
 #include "InfraredSensor.h"
 #include "LED.h"
 #include "Button.h"
-#include <SoftwareSerial.h>
+//#include <SoftwareSerial.h>
 #include "testmodel.h"
 #include "Servo.h"
 
@@ -25,6 +25,8 @@ myServo myservo(Servopin);
 Servo mservo;
 SoundSenor soundsenor(SoundSensorpin);
 int angle=0;
+int buttoncounter = 0;
+
 void setup()
 {
 	//pinMode(53, INPUT);
@@ -36,7 +38,9 @@ void setup()
 
 void loop()
 {
-	Serial.println(soundsenor.getvolume());
+	btn.buttonCounterDown(buttoncounter);
+	Serial.println(buttoncounter);
+	//Serial.println(soundsenor.getvolume());
 	//if(Serial3.available())
 	//Serial3.println("Hello");
 	//Serial.println(scaleTo(analogRead(A0),0,1023,0,100));

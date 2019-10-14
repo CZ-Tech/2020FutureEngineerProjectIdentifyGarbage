@@ -17,7 +17,8 @@ class SoundSenor
 public:
 	SoundSenor(int i);
 	int volume;
-	int getvolume();
+		int getvolume();
+
 private:
 	int pin;
 };

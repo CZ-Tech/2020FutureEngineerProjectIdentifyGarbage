@@ -10,6 +10,7 @@ SoundSenor::SoundSenor(int i)
 	
 }
 
+
 int SoundSenor::getvolume()
 {
 	return volume=analogRead(pin);

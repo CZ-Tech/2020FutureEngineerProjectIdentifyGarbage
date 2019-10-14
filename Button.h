@@ -16,7 +16,13 @@ class Button
 public:
 	Button(int i);
 	bool getStatus();
+	int getTimes();
+	void buttonCounterDown(int& counter);
+	void buttonCounterPress(int& counter);
 private:
 	bool status;
 	int pin;
+	int counter=0;
+	int laststatus=LOW;
+	int nowstatus;	
 };
