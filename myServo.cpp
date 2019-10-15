@@ -14,20 +14,22 @@ myServo::myServo(int i)
 void myServo::rotateTo(int angle)
 {
 	//myservo.write()
+	myservo.angle(angle);
 }
 
 void myServo::testScan()
 {
 	for (int i = 0; i < 60; i++)
 	{
-		myservo.write(myservo.read() + 3);
-		delay(10);
+		pos += 3;
+		myservo.angle(pos);
+		delay(25);
 	}
 	for (int i = 0; i < 60; i++)
 	{
-		myservo.write(myservo.read() - 3);
-		delay(10);
-			
+		pos -= 3;
+		myservo.angle(pos);
+		delay(25);
 	}
 }
 

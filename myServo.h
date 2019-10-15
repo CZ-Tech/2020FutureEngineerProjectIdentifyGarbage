@@ -1,5 +1,5 @@
 // myServo.h
-#include "Servo.h"
+#include "DFRobot_Servo.h"
 #ifndef _MYSERVO_h
 #define _MYSERVO_h
 
@@ -10,9 +10,9 @@
 #endif
 
 
-#endif
 
-class myServo:Servo
+
+class myServo
 {
 public:
 	myServo(int i);
@@ -22,5 +22,6 @@ public:
 	Servo getservo();
 private:
 	int pin;
-
+	int pos = 0;
 };
+#endif
