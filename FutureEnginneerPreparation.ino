@@ -91,24 +91,6 @@ void loop()
 	//delay(1000);
 }
 
-void ipinMode2(int a, int b)
-{
-	pinMode(a, INPUT);
-	pinMode(b, INPUT);
-}
-void ipinMode3(int a, int b,int c)
-{
-	pinMode(a, INPUT);
-	pinMode(b, INPUT);
-	pinMode(c, INPUT);
-}
-void ipinMode4(int a, int b, int c,int d)
-{
-	pinMode(a, INPUT);
-	pinMode(b, INPUT);
-	pinMode(c, INPUT);
-	pinMode(d, INPUT);
-}
 //将一个范围内的数映射到另一个范围
 int scaleTo(int original, int min1, int max1, int min2, int max2)
 {
