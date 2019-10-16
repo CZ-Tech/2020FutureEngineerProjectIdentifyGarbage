@@ -1,4 +1,6 @@
+#include "myLCD.h"
 #include "Arduino.h"
+#include <LiquidCrystal.h>
 #include <Wire.h>
 //#include "Servo.h"
 #include <DFRobot_Servo.h>
@@ -35,6 +37,7 @@ Infrared infrared(InfraredSensor);
 //myServo myservo(Servopin);
 Servo myservo;
 SoundSenor soundsenor(SoundSensorpin);
+myLCD mylcd;
 //mu mymu(VISION_BODY_DETECT);
 int pos=0;
 int buttoncounter = 0;
@@ -48,12 +51,27 @@ void setup()
 	Serial.begin(115200);
 	myservo.attach(Servopin);
 	//mymu.initialize();
+	mylcd.show(1);
+	delay(1000);
+	mylcd.clear();
+	mylcd.show(2);
 }
 
 void loop()
 {
-	rotatoServoTo(myservo, 180);
-	rotatoServoTo(myservo, 0);
+	/*rotatoServoTo(180);
+	rotatoServoTo(0);*/
+	for (int i = 0; i < 60; i++)
+	{
+		pos += 3;
+		myservo.angle(pos);
+		delay(35);
+	}	for (int i = 0; i < 60; i++)
+	{
+		pos -= 3;
+		myservo.angle(pos);
+		delay(25);
+	}
 	//btn.buttonCounterDown(buttoncounter);
 	//Serial.println(buttoncounter);
 	//Serial.println(soundsenor.getvolume());
@@ -96,13 +114,13 @@ int scaleTo(int original, int min1, int max1, int min2, int max2)
 {
 	return (double)(original - min1) / (max1 - min1) * (max2 - min2) + min2;
 }
-void rotatoServoTo(Servo& mservo,int angle)
-{
-	int position=angle;
-	for (int i = 0; i < angle/3; i++)
-	{
-		position += 3;
-		mservo.angle(position);
-		delay(25);
-	}
-}
+//void rotatoServoTo(Servo& mservo,int angle)
+//{
+//	int position=angle;
+//	for (int i = 0; i < angle/3; i++)
+//	{
+//		position += 3;
+//		mservo.angle(position);
+//		delay(25);
+//	}
+//}
