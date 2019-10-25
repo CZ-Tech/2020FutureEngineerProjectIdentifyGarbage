@@ -39,10 +39,10 @@
     <ClInclude Include="SoundSensor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mu.h">
+    <ClInclude Include="myLCD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="myLCD.h">
+    <ClInclude Include="UltrasonicSensor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,10 +62,10 @@
     <ClCompile Include="SoundSensor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mu.cpp">
+    <ClCompile Include="myLCD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="myLCD.cpp">
+    <ClCompile Include="UltrasonicSensor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
