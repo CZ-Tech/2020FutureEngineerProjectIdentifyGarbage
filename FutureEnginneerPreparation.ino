@@ -33,9 +33,11 @@
 #define SERIAL_MODE
 #define MU_ADDRESS    0x60
 
+#pragma region 舵机角度预定义区
 int right = 0;
 int left = 180;
 int forward = 90;
+#pragma endregion
 #pragma region 对象声明区 
 Servo servo;
 SoundSenor soundsenor(SoundSensorpin);
@@ -94,8 +96,12 @@ void setup()
 	Serial.println("Servo initialized");
 #pragma endregion
 
-
 	delay(100);
+	rotateToLeft(servo);
+	delay(1000);
+	rotateToForward(servo);
+	delay(1000);
+	rotateToRight(servo);
 	//while (!= MU_OK) {delay(20);};
 #pragma region 配置MU
 	while (Mu.SensorSetDefault() != MU_OK) { delay(20); };//重置设定
@@ -115,7 +121,6 @@ void setup()
 		break;
 	}
 #pragma endregion
-
 }
 
 void loop()
@@ -233,4 +238,27 @@ int scale(int input,int min, int max)
 	scaleTo(input,0, 1023, min,max);
 }
 
+void rotateToForward(Servo& inservo)
+{
+	inservo.angle(forward);
+}
+void rotateToLeft(Servo& inservo)
+{
+	inservo.angle(left);
+}
+void rotateToRight(Servo& inservo)
+{
+	inservo.angle(right);
+}
+void rotateToanlge(Servo& inservo,int current, int target)
+{
+	int angle = current;
+	int k = current <= target ? 1 : -1;
+	for (int i = 0; i < abs(current-target); i++)
+	{
+		delay(10);
+		angle=angle+k;
+		inservo.angle(angle);
+	}
+}
 
