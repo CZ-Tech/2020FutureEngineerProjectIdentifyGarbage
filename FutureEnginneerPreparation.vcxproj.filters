@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="FutureEnginneerPreparation.ino" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="__vm\.FutureEnginneerPreparation.vsarduino.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Button.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -43,6 +37,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UltrasonicSensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="__vm\.FutureEnginneerPreparation.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,5 +65,8 @@
     <ClCompile Include="UltrasonicSensor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FutureEnginneerPreparation.ino" />
   </ItemGroup>
 </Project>
